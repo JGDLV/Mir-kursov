@@ -1,13 +1,13 @@
 -
   const works = [
-    { image: 'img/works-01.png', text: 'ООО Вириал' },
-    { image: 'img/works-02.png', text: 'ООО Сочувствие' },
-    { image: 'img/works-03.png', text: '«Центральный научно-исследовательский институт робототехники и технической кибернетики»' },
-    { image: 'img/works-04.png', text: 'СПб ГУП Пассажиравтотранс' },
-    { image: 'img/works-05.png', text: 'ПАО Техприбор' },
-    { image: 'img/works-06.png', text: 'ПАО Звезда' },
-    { image: 'img/works-07.png', text: 'ООО Балтийский завод' },
-    { image: 'img/works-08.png', text: 'ООО Ленинградский завод спец. крепежа' },
+    { src: 'img/works-01.png', text: 'ООО Вириал' },
+    { src: 'img/works-02.png', text: 'ООО Сочувствие' },
+    { src: 'img/works-03.png', text: '«Центральный научно-исследовательский институт робототехники и технической кибернетики»' },
+    { src: 'img/works-04.png', text: 'СПб ГУП Пассажиравтотранс' },
+    { src: 'img/works-05.png', text: 'ПАО Техприбор' },
+    { src: 'img/works-06.png', text: 'ПАО Звезда' },
+    { src: 'img/works-07.png', text: 'ООО Балтийский завод' },
+    { src: 'img/works-08.png', text: 'ООО Ленинградский завод спец. крепежа' }
   ]
 
 .works
@@ -17,7 +17,7 @@
       each item in works
         .works__item
           .works__item-image-part
-            img.works__item-image(src=item.image, alt=item.text)
+            img.works__item-image(src=item.src, alt=item.text)
           .works__item-text-part= item.text
     a.works__button.btn.a-btn-h(href="#")
       span Показать еще

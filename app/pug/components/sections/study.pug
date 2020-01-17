@@ -1,25 +1,33 @@
+-
+  const study = [
+    {
+      src: 'img/study-01.svg',
+      header: 'Любой разряд <br>и квалификация',
+      text: 'Вы&nbsp;повысите профессиональную компетенцию до&nbsp;разных уровней: в&nbsp;центре есть занятия на&nbsp;разряды с&nbsp;3&nbsp;по&nbsp;6, а&nbsp;квалификационные курсы доступны ежегодно'
+    },
+    {
+      src: 'img/study-02.svg',
+      header: 'Диплом <br>гособразца',
+      text: 'Вы&nbsp;получите документ подтверждающий подготовку на&nbsp;государственном уровне. Такой сертификат ценится выше удостоверений других центров'
+    },
+    {
+      src: 'img/study-03.svg',
+      header: 'Помощь <br>в трудоустройстве',
+      text: 'У&nbsp;вас появится шанс устроиться на&nbsp;производство в&nbsp;Санкт-Петербурге и&nbsp;области. Сотрудничаем с&nbsp;60&nbsp;отраслевыми предприятиями, где проходят практику наши слушатели'
+    }
+  ]
+
 .study#study
   .container
     h2.study__header Обучение операторов ЧПУ и наладчиков
     p.study__subheader Престижное образование на базе Невского машиностроительного техникума
     p.study__text С 1965 года занимаемся подготовкой кадров для работы со станками с ЧПУ. Предлагаем программы повышения разряда и квалификации, подготовки и переподготовки. Среди наших преподавателей 12 кандидатов и 3 доктора наук с опытом в производственной сфере более 15 лет, они ежегодно повышают квалификацию, поэтому слушатели получают актуальные знания и приступить к работе после квалификационных экзаменов.
     .study-items
-      .study__item
-        .study__item-image-part
-          img.study__item-image(src="img/study-01.svg" alt="")
-        .study__item-text-part
-          p.study__item-header Любой разряд <br>и квалификация
-          p.study__item-text Вы&nbsp;повысите профессиональную компетенцию до&nbsp;разных уровней: в&nbsp;центре есть занятия на&nbsp;разряды с&nbsp;3&nbsp;по&nbsp;6, а&nbsp;квалификационные курсы доступны ежегодно
-      .study__item
-        .study__item-image-part
-          img.study__item-image(src="img/study-02.svg" alt="")
-        .study__item-text-part
-          p.study__item-header Диплом <br>гособразца
-          p.study__item-text Вы&nbsp;получите документ подтверждающий подготовку на&nbsp;государственном уровне. Такой сертификат ценится выше удостоверений других центров
-      .study__item
-        .study__item-image-part
-          img.study__item-image(src="img/study-03.svg" alt="")
-        .study__item-text-part
-          p.study__item-header Помощь <br>в трудоустройстве
-          p.study__item-text У&nbsp;вас появится шанс устроиться на&nbsp;производство в&nbsp;Санкт-Петербурге и&nbsp;области. Сотрудничаем с&nbsp;60&nbsp;отраслевыми предприятиями, где проходят практику наши слушатели
+      each item in study
+        .study__item
+          .study__item-image-part
+            img.study__item-image(src=item.src alt="")
+          .study__item-text-part
+            p.study__item-header !{item.header}
+            p.study__item-text !{item.text}
 // study
