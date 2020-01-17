@@ -1,0 +1,732 @@
+$dark: #232e3f
+$blue: #6f9ac8
+$light-blue: #2daae1
+$dark-blue: #104e7e
+$gray: #93999d
+$yellow: #ffcb2d
+$w: #ffffff
+$bg: #f1f4f6
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+body
+  font-family: 'Harmonia', sans-serif
+  font-size: 18px
+  line-height: calc(25 / 18)
+  font-weight: 400
+  color: $dark
+
+.container
+  max-width: 1200px
+  padding: 0 15px
+  margin: 0 auto
+
+.btn
+  display: block
+  text-align: center
+  background: $yellow
+  font-size: 18px
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 1.35px
+  color: $dark
+
+  &::before, &::after
+    background: darken($yellow, 15%)
+
+.main-header
+
+  &-top
+    padding: 25px 0 30px
+
+    &__inner
+      +flex
+  
+  &-bottom
+    background: $blue
+
+.logo
+  margin: 9px 60px 0 0
+
+  &__link
+    display: block
+    line-height: 0
+  
+  &__image
+    width: 340px
+
+.header-contacts
+  font-size: 14px
+  line-height: 20px
+  margin-right: 61px
+
+  &__email
+    color: $light-blue
+    border-bottom: 1px solid rgba($light-blue, .5)
+
+    &:hover
+      border-color: transparent
+
+  &__callback
+    width: 140px
+    height: 30px
+    line-height: 28px
+    border: 1px solid $gray
+    display: block
+    text-align: center
+    color: $gray
+    margin-top: 15px
+
+    &:hover
+      color: $w
+
+    &::before, &::after
+      background: $gray
+
+.header-phone
+
+  &_01
+    margin-top: 20px
+
+  &_02
+    margin: 0 13px 0 auto
+
+  &__title
+    font-size: 14px
+    line-height: 20px
+    margin-bottom: 17px
+
+  &__link
+    font-size: 24px
+    font-weight: 700
+    line-height: 20px
+    color: $dark
+    margin-left: -17px
+
+    &:hover
+      color: $blue
+
+  &__whours
+    font-size: 14px
+    line-height: 20px
+    color: $gray
+    margin-top: -2px
+
+.main-menu
+
+  &-items
+    +flex
+
+  &__item
+    flex-grow: 1
+
+  &__link
+    color: $w
+    display: block
+    text-align: center
+    line-height: 60px
+    font-size: 24px
+    position: relative
+    z-index: 20
+
+  &__hover
+    background: $dark-blue
+    position: absolute
+    opacity: 0
+    z-index: 10
+    +tr
+
+.intro
+  padding: 220px 0 120px
+  background: url('../img/bg-intro.png') top center no-repeat
+  background-size: cover
+  color: $w
+
+  &__inner
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &__left
+    padding-top: 33px
+
+  &__header
+    font-size: 48px
+    font-weight: 900
+    line-height: 60px
+    text-transform: uppercase
+    margin-bottom: 24px
+
+  &__subheader
+    font-size: 24px
+    font-weight: 700
+    line-height: 30px
+
+  &-form
+    max-width: 370px
+    background: $blue
+    padding: 19px 50px 40px
+    position: relative
+    color: $w
+
+    &#callback
+      margin: auto
+      padding-top: 30px
+
+      p
+        margin-bottom: 20px
+
+      &::before
+        content: none
+
+      .mfp-close
+        color: $w !important
+
+    &::before
+      +pseudo
+      width: 101px
+      height: 101px
+      background: url('../img/intro-form-badge.png') no-repeat
+      top: 0
+      right: 0
+
+    &__text
+      margin-bottom: 3px
+
+    &__header
+      font-size: 24px
+      font-weight: 700
+      line-height: 25px
+      margin-bottom: 8px
+
+    &__name, &__phone, &__submit
+      width: 100%
+      height: 50px
+      line-height: 50px
+      margin-bottom: 10px
+
+    &__name, &__phone
+      padding: 0 20px
+      color: $dark
+
+      &::placeholder
+        color: $gray
+
+    &__submit
+      margin-bottom: 0
+
+h2
+  font-size: 48px
+  font-weight: 600
+  line-height: 60px
+  text-transform: uppercase
+  text-align: center
+  letter-spacing: -0.25px
+
+.study
+  padding: 73px 0 80px
+  background-color: $bg
+
+  &__header
+    margin-bottom: -11px
+
+  &__subheader
+    text-align: center
+    font-size: 24px
+    font-weight: 700
+    line-height: 60px
+    margin-bottom: 20px
+
+  &__text
+    margin-bottom: 38px
+
+  &-items
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &__item
+    background: $w
+    width: calc(100% / 3 - 15px)
+    text-align: center
+    padding: 39px 25px 43px
+
+    &-image-part
+      line-height: 0
+      min-height: 102px
+      +flex
+      justify-content: center
+      align-items: flex-end
+      margin-bottom: 16px
+
+    &-header
+      font-size: 24px
+      font-weight: 700
+      line-height: 30px
+      margin-bottom: 15px
+
+    &-text
+      color: $gray
+
+.programs
+  padding: 73px 0 80px
+
+  &__header
+    margin-bottom: 47px
+
+    &_small
+      font-size: 24px
+      font-weight: 700
+      line-height: 25px
+      margin-bottom: 38px
+
+  &-tabs
+
+    &-controls
+      +flex
+
+    &__control
+      width: calc(100% / 3)
+      color: $blue
+      font-size: 24px
+      line-height: 58px
+      border: 1px solid $blue
+      text-align: center
+      border-right: 0
+      cursor: pointer
+      +tr
+      position: relative
+
+      &:hover
+        background: rgba($blue, .25)
+
+      &.active
+        background: $blue
+        color: $w
+
+        &::after
+          +pseudo
+          width: 0
+          height: 0
+          border-style: solid
+          border-width: 14px 14px 0 14px
+          border-color: $blue transparent transparent transparent
+          top: 100%
+          left: 50%
+          transform: translateX(-50%)
+          animation: fadeIn .5s ease
+
+      &:last-child
+        border-right: 1px solid $blue
+
+    &__content
+      padding: 62px 0 0
+
+  &__text
+    margin-bottom: 27px
+
+  &-list
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 18px
+
+    &__item
+      padding-left: 54px
+      position: relative
+      min-height: 40px
+      width: 50%
+      margin-bottom: 20px
+
+      &::before
+        +pseudo
+        width: 35px
+        height: 40px
+        background: url('../img/programs-list-bg.svg') no-repeat
+        top: -6px
+        left: 0
+        font-family: 'Font Awesome 5 Free'
+        content: '\f00c'
+        font-weight: 900
+        line-height: 40px
+        text-align: center
+        color: $w
+        font-size: 20px
+
+  &-table
+    border-collapse: collapse
+    margin-bottom: 55px
+
+    td
+      padding-left: 20px
+
+      &:first-child
+        width: 280px
+
+      &:nth-child(2)
+        width: 530px
+        padding-right: 40px
+
+      &:nth-child(3)
+        width: 170px
+
+      &:nth-child(4)
+        width: 190px
+
+    thead
+      background: $blue
+
+      td
+        color: $w
+        font-weight: 700
+        line-height: 60px
+
+    tbody
+
+      tr
+
+        &:nth-child(odd)
+          background-color: $bg
+
+      td
+        padding: 22px 0 21px 20px
+        vertical-align: top
+
+        &:nth-child(3)
+          text-align: center
+          padding-right: 40px
+
+        &:nth-child(4)
+          font-size: 24px
+          font-weight: 700
+          line-height: 25px
+          
+  &-items
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+    border: 1px solid #d0d4d9
+    margin: -2px 0 30px
+
+  &__item
+    width: calc(100% / 3 - 15px)
+    text-align: center
+    position: relative
+    padding: 61px 0 28px
+
+    &::before
+      +pseudo
+      width: 30px
+      height: 28px
+      background: url('../img/icon-schedule.svg')
+      top: 31px
+      left: 50%
+      transform: translateX(-50%)
+
+    &-text
+      margin-bottom: -1px
+
+    &-date
+      font-weight: 700
+
+  &__button
+    width: 290px
+    height: 50px
+    line-height: 50px
+    margin: auto
+
+.ending
+  background-color: $bg
+  padding: 73px 0 80px
+
+  &__header
+    margin-bottom: 47px
+
+  &-items
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &__item
+    background: $w
+    width: calc(50% - 15px)
+    text-align: center
+    padding: 71px 0 48px
+
+    &-image-part
+      height: 300px
+      margin-bottom: 31px
+
+    &__link
+      background: #000
+      display: inline-block
+      line-height: 0
+
+      &:hover .ending__item-image
+        opacity: .7
+
+    &-image
+      +tr
+
+.works
+  padding: 73px 0 80px
+
+  &__header
+    margin-bottom: 54px
+
+  &-items
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 29px
+
+  &__item
+    width: calc(25% - 15px)
+    text-align: center
+    margin-bottom: 37px
+
+    &-image-part
+      height: 102px
+      +flex
+      justify-content: center
+      align-items: center
+      margin-bottom: 3px
+
+    &-text-part
+      color: $gray
+
+  &__button
+    width: 290px
+    height: 50px
+    border: 1px solid $blue
+    background: $w
+    line-height: 48px
+    color: $blue
+    margin: auto
+
+    &:hover
+      color: $w
+
+    &::before, &::after
+      background: $blue
+
+.cta
+  padding: 41px 0 53px
+  background: $blue
+  color: $w
+
+  &__inner
+    +flex
+    justify-content: space-between
+    align-items: center
+
+  &__header
+    font-size: 36px
+    font-weight: 900
+    margin-bottom: 3px
+
+  &__text
+    font-size: 24px
+
+  &__button
+    width: 370px
+    height: 60px
+    line-height: 60px
+    margin-top: 12px
+
+.faq
+  background-color: $bg
+  padding: 73px 0 70px
+
+  &__header
+    margin-bottom: 47px
+
+  &__item
+    background: $w
+    margin-bottom: 10px
+
+    &-question
+      color: $blue
+      font-size: 24px
+      font-weight: 600
+      line-height: 25px
+      padding: 19px 10px 26px 31px
+      cursor: pointer
+      +tr
+      position: relative
+
+      &:hover
+        color: $dark
+
+      &::after
+        +pseudo
+        font-family: 'Font Awesome 5 Free'
+        content: '\f078'
+        font-weight: 900
+        top: 50%
+        transform: translateY(-50%)
+        right: 20px
+        font-size: 30px
+        transition: transform .5s ease
+
+      &.active
+        color: $dark
+
+        &::after
+          color: $dark
+          transform: translateY(-50%) rotate(540deg)
+
+    &-answer
+      padding: 2px 90px 33px 31px
+      display: none
+
+.feedback
+  padding: 17px 0 40px
+  background: url('../img/bg-feedback.png') top center no-repeat
+  background-size: cover
+  color: $w
+
+  .container
+    position: relative
+
+    &::before
+      +pseudo
+      width: 100px
+      height: 55px
+      background: url('../img/feedback-badge.png') no-repeat
+      top: -17px
+      right: 15px
+
+  &__header
+    font-size: 24px
+    font-weight: 700
+    line-height: 30px
+    text-align: center
+    text-transform: none
+    letter-spacing: 0
+    margin-bottom: 8px
+
+  &__subheader
+    font-size: 24px
+    text-align: center
+    margin-bottom: 12px
+
+  &-form
+    max-width: 770px
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+    margin: auto
+
+    &__name, &__phone
+      width: 270px
+      height: 50px
+      background-color: #ffffff
+      padding: 0 20px
+      color: $dark
+
+      &::placeholder
+        color: $gray
+
+    &__submit
+      width: 170px
+      height: 50px
+      line-height: 50px
+
+.main-footer
+
+  &-top
+    padding: 25px 0 13px
+
+    &__inner
+      +flex
+
+  &-bottom
+    background: $bg
+
+    &__inner
+      +flex
+      justify-content: space-between
+      align-items: center
+
+    p
+      color: $gray
+      font-size: 14px
+      line-height: 40px
+
+    a
+      text-transform: uppercase
+      color: $gray
+      border-bottom: 1px solid rgba($gray, .5)
+
+      &:hover
+        border-color: transparent
+
+  .logo
+    margin: 22px 30px 0 0
+
+    &__image
+      width: 270px
+
+.footer-menu
+  margin-top: 27px
+
+  &_01
+    margin-right: 25px
+
+  &__item
+    margin-bottom: 5px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__link
+    color: $blue
+    font-size: 18px
+    font-weight: 700
+    line-height: 20px
+    border-bottom: 1px solid rgba($blue, .5)
+
+    &:hover
+      border-color: transparent
+
+.footer-contacts
+  margin-left: 56px
+
+  &__address
+    font-size: 14px
+    line-height: 20px
+    margin-bottom: 17px
+
+  &__phone
+    font-size: 24px
+    font-weight: 700
+    line-height: 20px
+    color: $dark
+
+    &:hover
+      color: $blue
+
+  &__whours
+    color: $gray
+    font-size: 14px
+    line-height: 20px
+    margin: -2px 0 -3px
+
+  &__email
+    font-size: 14px
+    line-height: 20px
+    color: $light-blue
+    border-bottom: 1px solid rgba($light-blue, .5)
+
+    &:hover
+      border-color: transparent
+
+#top
+  width: 40px
+  height: 46px
+  background: url('../img/icon-top.svg') no-repeat
