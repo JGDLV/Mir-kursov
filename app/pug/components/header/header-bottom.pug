@@ -1,12 +1,15 @@
+-
+  const menu = [
+    { href: '#study', text: 'О нас' },
+    { href: '#programs', text: 'Программа обучения' },
+    { href: '#ending', text: 'Дипломы и свидетельства' },
+    { href: '#faq', text: 'Вопросы и ответы' }
+  ]
+
 .main-header-bottom
   .container
     .main-menu
       ul.main-menu-items
-        li.main-menu__item
-          a.main-menu__link(href="#study") О нас
-        li.main-menu__item
-          a.main-menu__link(href="#programs") Программа  обучения
-        li.main-menu__item
-          a.main-menu__link(href="#ending") Дипломы и свидетельства
-        li.main-menu__item
-          a.main-menu__link(href="#faq") Вопросы и ответы
+        each item in menu
+          li.main-menu__item
+            a.main-menu__link(href=item.href)= item.text
