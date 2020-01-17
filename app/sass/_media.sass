@@ -1,0 +1,346 @@
+@media (min-width: 576px) and (max-width: 767px)
+  .container
+    max-width: 540px
+
+@media (min-width: 768px) and (max-width: 991px)
+  .container
+    max-width: 720px
+
+@media (min-width: 992px) and (max-width: 1200px)
+  .container
+    max-width: 960px
+
+@media (max-width: 1200px)
+  br
+    display: none
+
+  .study__item-header br
+    display: inline
+
+  .main-header
+
+    &-top
+      padding: 20px 0
+
+      &__inner
+        justify-content: space-around
+        align-items: center
+
+        > *
+          margin: 0 15px
+
+  .logo
+    max-width: 260px
+
+  .header-phone
+
+    &__title
+      display: none
+
+    &_02
+      display: none
+
+  .main-menu
+
+    &-items
+      justify-content: center
+
+    &__link
+      font-size: 20px
+      padding: 0 20px
+      line-height: 50px
+
+  .intro
+    padding: 40px 0
+
+    &__left
+      width: 100%
+      padding: 0
+      margin-bottom: 30px
+
+    &__right
+      margin: auto
+      max-width: 100%
+
+    &-form
+
+      &__header
+        padding-right: 40px
+
+  h1, h2, .cta__header
+    font-size: 36px !important
+    line-height: normal !important
+    text-align: center
+    margin-bottom: 30px !important
+
+    & + *[class*="__subheader"]
+      margin-top: -20px
+      line-height: normal
+      text-align: center
+
+  .study
+    padding: 40px 0
+
+  .programs
+    padding: 40px 0
+
+    &-table
+
+      thead
+        display: none
+
+      tr
+        border: 1px solid rgba($dark, .1)
+        margin-bottom: 30px
+
+      td
+        display: block
+        position: relative
+        padding: 45px 20px 20px !important
+        width: 100% !important
+        text-align: left !important
+        border-bottom: 1px solid rgba($dark, .1)
+
+        &:last-child
+          border-bottom: 0
+
+        &::before
+          +pseudo
+          content: attr(data-label)
+          top: 0
+          left: 0
+          padding: 15px 20px 5px
+          font-size: 20px
+          font-weight: 600
+          line-height: 1.5
+          width: 100%
+          text-transform: uppercase
+
+  .ending
+    padding: 40px 0
+
+    &__item
+      padding: 30px
+
+      &-image-part
+        height: auto
+
+  .works
+    padding: 40px 0
+
+  .cta
+    padding: 40px 0
+    text-align: center
+
+    &__text-part
+      width: 100%
+
+    &__header
+      margin-bottom: 5px !important
+
+    &__button
+      margin: 20px auto 0
+
+  .faq
+    padding: 40px 0
+
+  .feedback
+    padding: 70px 0 40px
+
+    .container
+
+      &::before
+        top: -70px
+
+  .main-footer
+    
+    &-top
+      padding: 30px 0
+
+      &__inner
+        justify-content: space-around
+
+        > *
+          margin: 5px 15px
+
+    .logo
+      width: 100%
+      max-width: 100%
+      text-align: center
+      margin: 5px 15px 20px
+
+// 1200px
+
+@media (max-width: 991px)
+  .header-phone
+    margin-top: 20px
+
+  .main-menu__item
+    flex-grow: 0
+
+  .study-items
+    margin-bottom: -30px
+
+  .study__item
+    width: 100%
+    margin-bottom: 30px
+
+  .programs-tabs__control
+    line-height: normal
+    +flex
+    align-items: center
+    justify-content: center
+    font-size: 20px
+    padding: 10px
+
+  .programs-tabs__control.active::after
+    content: none
+
+  .programs-tabs__content
+    padding-top: 30px
+
+  .programs-list__item
+    padding-right: 30px
+
+  .programs-items
+    padding: 30px 30px 0
+
+  .programs__item
+    width: 100%
+    padding: 50px 0 30px
+
+    &::before
+      top: 0
+
+  .ending-items
+    margin-bottom: -30px
+
+  .ending__item
+    width: 100%
+    margin-bottom: 30px
+
+  .works__item
+    width: calc(50% - 15px)
+    margin-bottom: 30px
+
+  .feedback-form
+    text-align: center
+
+    &__name,
+    &__phone,
+    &__submit
+      width: 60%
+      margin: 20px auto 0
+
+  .footer-menu
+    margin-bottom: 20px
+
+// 991px
+
+@media (max-width: 770px)
+  .logo
+    margin-bottom: 15px
+
+  .header-contacts
+    width: 100%
+    margin: 0
+    text-align: center
+
+    &__callback
+      margin: 20px auto 0
+
+  .header-phone
+    text-align: center
+
+    &__link
+      margin-left: 0
+
+    &__whours
+      margin-top: 2px
+
+  .intro-form
+    max-width: 100%
+
+  h1, h2, .cta__header
+    font-size: 26px !important
+
+    & + *[class*="__subheader"]
+      font-size: 20px
+
+  .programs-list__item
+    width: 100%
+    padding-right: 0
+
+  .faq__item-question
+    font-size: 22px
+
+  .footer-menu
+    width: 100%
+    margin: 5px 0 15px
+    text-align: center
+
+  .footer-contacts
+    text-align: center
+
+// 770px
+
+@media (max-width: 600px)
+  .main-header-bottom
+
+    .container
+      padding: 0
+
+  .main-menu
+    padding: 5px 0
+    position: relative
+
+    &-items
+      display: none
+      position: absolute
+      width: 100%
+      background: $blue
+      padding-bottom: 10px
+
+  .menu-toggle
+    display: flex
+    margin: 0 10px 0 auto
+    border: 0
+
+// 600px
+
+@media (max-width: 576px)
+  .works__item
+    width: 100%
+
+  .faq__item-question
+    font-size: 20px
+
+  .feedback-form
+    text-align: center
+
+    &__name,
+    &__phone,
+    &__submit
+      width: 100%
+
+// 576px
+
+@media (max-width: 450px)
+  .programs-tabs__control
+    width: 100%
+    border: 1px solid #6f9ac8
+    border-bottom: 0
+
+    &:last-child
+      border-bottom: 1px solid #6f9ac8
+
+// 450px
+
+@media (max-width: 400px)
+  .header-contacts__address br
+    display: inline
+
+  .intro-form
+    padding: 30px 20px
+
+// 400px

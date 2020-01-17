@@ -57,6 +57,13 @@
     { label: 'Подготовка/Переподготовка', date: '10 июля 2017 года' }
   ]
 
+  const labels = [
+    'Категория курса',
+    'Описание',
+    'Кол-во часов',
+    'Цена, руб'
+  ]
+
 .programs#programs
   .container
     h2.programs__header Программы обучения на станках с ЧПУ
@@ -74,26 +81,26 @@
           table.programs-table
             thead
               tr
-                td Категория курса
-                td Описание
-                td Кол-во часов
-                td Цена, руб
+                td= labels[0]
+                td= labels[1]
+                td= labels[2]
+                td= labels[3]
             tbody
               tr
-                td= nearest[0].label
-                td Получение нового квалификационного уровня для допуска к более сложной работе и ответственной должности
-                td 16
-                td= item.prices[0]
+                td(data-label= labels[0])= nearest[0].label
+                td(data-label= labels[1]) Получение нового квалификационного уровня для допуска к более сложной работе и ответственной должности
+                td(data-label= labels[2]) 16
+                td(data-label= labels[3])= item.prices[0]
               tr
-                td= nearest[1].label
-                td Комплексное обучение актуальным методам работы, техническим и правовым нововведениям
-                td 72
-                td= item.prices[1]
+                td(data-label= labels[0])= nearest[1].label
+                td(data-label= labels[1]) Комплексное обучение актуальным методам работы, техническим и правовым нововведениям
+                td(data-label= labels[2]) 72
+                td(data-label= labels[3])= item.prices[1]
               tr
-                td= nearest[2].label
-                td Подготовка кадров для производственных предприятий с нуля или на базе полученного ранее образования
-                td 120
-                td= item.prices[2]
+                td(data-label= labels[0])= nearest[2].label
+                td(data-label= labels[1]) Подготовка кадров для производственных предприятий с нуля или на базе полученного ранее образования
+                td(data-label= labels[2]) 120
+                td(data-label= labels[3])= item.prices[2]
           p.programs__header_small(style='text-align:center;') Ближайшие занятия пройдут:
           .programs-items
             each item in nearest

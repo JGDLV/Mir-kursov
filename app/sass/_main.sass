@@ -34,6 +34,7 @@ body
   text-transform: uppercase
   letter-spacing: 1.35px
   color: $dark
+  max-width: 100%
 
   &::before, &::after
     background: darken($yellow, 15%)
@@ -496,6 +497,13 @@ h2
       align-items: center
       margin-bottom: 3px
 
+    &-image
+      filter: grayscale(100%) opacity(0.5)
+      +tr
+
+      &:hover
+        filter: none
+
     &-text-part
       color: $gray
 
@@ -554,7 +562,7 @@ h2
       font-size: 24px
       font-weight: 600
       line-height: 25px
-      padding: 19px 10px 26px 31px
+      padding: 19px 60px 26px 31px
       cursor: pointer
       +tr
       position: relative
@@ -567,8 +575,7 @@ h2
         font-family: 'Font Awesome 5 Free'
         content: '\f078'
         font-weight: 900
-        top: 50%
-        transform: translateY(-50%)
+        top: 23px
         right: 20px
         font-size: 30px
         transition: transform .5s ease
@@ -578,7 +585,7 @@ h2
 
         &::after
           color: $dark
-          transform: translateY(-50%) rotate(540deg)
+          transform: rotate(540deg)
 
     &-answer
       padding: 2px 90px 33px 31px

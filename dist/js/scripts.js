@@ -46,7 +46,12 @@ $(document).ready(function () {
 
   $('.menu-toggle .icon-toggle').click(function () {
     $(this).toggleClass('active');
-    $('menu').slideToggle();
+    $('.main-menu-items').slideToggle();
+  });
+
+  $('.main-menu__link').on('click', function() {
+    $('.main-menu-items').slideUp();
+    $('.menu-toggle .icon-toggle').removeClass('active');
   });
 
   $('a[href="#callback"]').magnificPopup({
@@ -121,6 +126,12 @@ $(document).ready(function () {
       'top': pseudoOffsetTop + 'px',
       'opacity': 1,
     });
+
+    if ($(window).width() <= 600) {
+      $('.main-menu__hover').css({
+        'top': pseudoOffsetTop + pseudoHeight + 'px',
+      });
+    }
   });
 
   $('.main-menu__item').on('mouseout', function () {
